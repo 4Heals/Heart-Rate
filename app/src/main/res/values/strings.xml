@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">PULSE MONITOR</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="heart_rate_description">Touch the button below to monitor your heart rate</string>
+    <string name="btn_start">Start</string>
+    <string name="trending">Trending</string>
+    <string name="heart_rate_monitor">Heart rate</string>
+    <string name="heart_rate_measuring">Measuring your heart rate</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_pause">Pause</string>
+    <string name="heart_rate_monitor_guide">Place your finger on your main behind camera and flash light</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_measure_hr">Measure</string>
+
+    <string name="hr_notes">Notes</string>
+    <string name="hr_type_some_notes">Type some notes here...</string>
+    <string name="hr_choose_status">Choose your status</string>
+    <string name="hr_avg_range">Average %s range</string>
+    <string name="hr_resting">resting</string>
+    <string name="hr_after_exercise">after exercise</string>
+    <string name="hr_tired">tired</string>
+    <string name="hr_excited">excited</string>
+    <string name="hr_measure_history">Heart rate history</string>
+    <string name="hr_select_a_day">Select a day to view results</string>
+    <string name="hr_average">AVERAGE</string>
+    <string name="hr_max">MAX</string>
+    <string name="hr_min">MIN</string>
+    <string name="btn_got_it">Got it</string>
+    <string name="hr_alter_measure_btn_tutorial">You can also touch this button to measure your heart rate</string>
+    <string name="hr_chart_tutorial">Touch any vertical bar to show heart rate result\'s statistic and history of this day</string>
+    <string name="hr_notes_tutorial">Remember you can write some note for more information about your status</string>
+    <string name="hr_status_tutorial">Touch to select your current health status</string>
+    <string name="hr_measure_save_tutorial">Touch the save button to finish</string>
+    <string name="hr_measure_btn_tutorial">You can touch this button to measure your heart rate</string>
+    <string name="hr_status_range_tutorial">For each status, there is a average heart rate range of normal people respectively</string>
+    <string name="hr_cam_diag_title">Camera permission required</string>
+    <string name="hr_cam_diag_desc">We need camera permission in order to measure your heart rate</string>
+    <string name="hr_cam_not_grant">Permission is not granted! this operation require camera usage permission to work</string>
+    <string name="hr_cam_granted">Permission is now granted! Follow the instruction to measure your heart rate</string>
+    <string name="result">Result</string>
+    <string name="hr_week_from_date_to_date">%s (%s-%s)</string>
+    <string name="hr_this_week">This week</string>
+    <string name="hr_n_week_ago">%d week(s) ago</string>
+    <string name="about">About</string>
+    <string name="about_desc">Heart Rate Monitor App </string>
+
+</resources>

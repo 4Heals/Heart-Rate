@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <ImageView
+        android:id="@+id/img_heart_rate2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_top2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_heart_rate_value2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/h1" />
+
+    <TextView
+        android:id="@+id/tv_heart_rate_value2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="92"
+        android:textSize="60sp"
+        android:textColor="@color/hrRed"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_top2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_bpm2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/img_heart_rate2" />
+
+    <TextView
+        android:id="@+id/tv_bpm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_heart_rate_value2"
+        android:text="BPM"
+        android:textSize="20sp"
+        android:textColor="@color/hrRed"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_heart_rate_value2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tv_heart_rate_value2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_heart_rate"
+        android:secondaryProgress="0"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hr_status_name2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_heart_rate"
+        android:secondaryProgress="100"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_expect_max_hr2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_expect_min_hr2"
+        app:layout_constraintTop_toTopOf="@+id/progressBar4" />
+
+    <TextView
+        android:id="@+id/tv_hr_min2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="40"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_left"
+        app:layout_constraintStart_toStartOf="@+id/progressBar4"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <TextView
+        android:id="@+id/tv_hr_max2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="120"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/progressBar4"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_expect_min_hr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2625" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_expect_max_hr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <TextView
+        android:id="@+id/tv_expect_hr_min2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="61"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_expect_min_hr2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_expect_min_hr2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <TextView
+        android:id="@+id/tv_expect_hr_max2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="76"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_expect_max_hr2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_expect_max_hr2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_current_hr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tv_current_hr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="92"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_current_hr2"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="@+id/guideline_current_hr2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <View
+        android:id="@+id/line_current_hr2"
+        android:layout_width="2dp"
+        android:layout_height="20dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_current_hr2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_current_hr2"
+        app:layout_constraintTop_toTopOf="@+id/progressBar4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.39" />
+
+    <TextView
+        android:id="@+id/tv_hr_range_description2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/hr_avg_range"
+        android:textAlignment="center"
+        android:textColor="@color/hrDarkRed"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_expect_max_hr2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_expect_min_hr2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <Button
+        android:id="@+id/btn_measure_hr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btn_measure_hr"
+        style="@style/Button.RaisedButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hr_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="12:59 12 Thg 10"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_hr_status_home_frag"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/tv_hr_status_name2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heart_rate_value2"
+        app:srcCompat="@drawable/rested" />
+
+    <TextView
+        android:id="@+id/tv_hr_status_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Resting"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/img_hr_status_home_frag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/img_hr_status_home_frag"
+        app:layout_constraintTop_toTopOf="@+id/img_hr_status_home_frag" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    tools:context="com.example.hrate.home.TrendFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_radius_top_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_radius_full_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_date_back"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Button.FlatIconButton"
+                        android:drawableStart="@drawable/ic_navigate_before_black_24dp"
+                        android:drawableLeft="@drawable/ic_navigate_before_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_select_a_day_to_view_results"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="16dp"
+                        android:layout_weight="1"
+                        android:text="@string/hr_select_a_day"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/btn_date_next"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Button.FlatIconButton"
+                        android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+                        android:drawableRight="@drawable/ic_navigate_next_black_24dp" />
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart_weekly_hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="16dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container_hr_avg_min_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_avg_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/hr_average"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_stat_avg_value"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_min_label"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_min_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hr_min"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_stat_min_value"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_max_label"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/tv_avg_label"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_max_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/hr_max"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_stat_max_value"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/tv_min_label"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_avg_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="--"
+                        android:textColor="@color/hrRed"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_avg_label" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_max_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="--"
+                        android:textColor="@color/hrRed"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_max_label"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_max_label" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_min_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="--"
+                        android:textColor="@color/hrRed"
+                        android:textSize="40sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_min_label"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_min_label" />
+
+                    <TextView
+                        android:id="@+id/tv_avg_bpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="BPM"
+                        android:textColor="@color/hrRed"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_stat_avg_value"
+                        app:layout_constraintStart_toEndOf="@+id/tv_stat_avg_value" />
+
+                    <TextView
+                        android:id="@+id/tv_min_bpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="BPM"
+                        android:textColor="@color/hrRed"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_stat_min_value"
+                        app:layout_constraintStart_toEndOf="@+id/tv_stat_min_value" />
+
+                    <TextView
+                        android:id="@+id/tv_max_bpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="BPM"
+                        android:textColor="@color/hrRed"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_stat_max_value"
+                        app:layout_constraintStart_toEndOf="@+id/tv_stat_max_value" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_hr_history_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="16dp"
+                android:text="@string/hr_measure_history"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hr_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24dp"
+                android:paddingBottom="16dp"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
